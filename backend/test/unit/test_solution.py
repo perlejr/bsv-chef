@@ -5,10 +5,6 @@ from src.controllers.recipecontroller import RecipeController
 
 # add your test case implementation here
 @pytest.mark.unit
-def test():
-    pass
-
-@pytest.mark.unit
 def id_1_Success_Optimal():
 
     readinessDict = {}

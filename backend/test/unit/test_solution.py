@@ -1,4 +1,5 @@
 import pytest
+
 from unittest.mock import MagicMock
 from src.controllers.recipecontroller import RecipeController
 

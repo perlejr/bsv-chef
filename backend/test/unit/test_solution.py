@@ -19,7 +19,7 @@ def id_1_Success_Optimal():
     mockedRC.get_readiness_of_recipes.return_value = readinessDict
     rc = RecipeController(mockedRC)
 
-    assert rc.get_recipe() 
+    assert rc.get_recipe() == False 
 
 @pytest.mark.unit
 def id_1_Success_Random():

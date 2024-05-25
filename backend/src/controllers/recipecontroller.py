@@ -110,11 +110,10 @@ class RecipeController(Controller):
 
         # order the recipes in descending order according to the readiness values, i.e., the first recipe in the list is the one with the highest readiness value
         sorted_recipes = [k for k, v in sorted(
-            recipe_readiness.items(), key=lambda item: item[0])]
-
+            recipe_readiness.items(), key=lambda item: item[1], reverse=True)]
         # determine which recipe to return according to the item usage mode
         selected_recipe_index = 0
-        if take_best:
+        if not take_best:
             selected_recipe_index = random.randint(0, len(sorted_recipes)-1)
 
         # determine the recipe name and retrieve the recipe from the list of recipes to return it
